@@ -196,10 +196,20 @@ a.intro__btn{
 }
 
 .intro__avatar{
-  width: 400px;
+  max-width: 400px;
   border-radius: 50%;
 }
-
+@media(max-width:767px){
+  .intro__inner{
+  flex-wrap: wrap;
+}
+.intro__banner-title{
+  order: 2;
+}
+.intro__avatar{
+  order: 0;
+}
+}
 
  
 
