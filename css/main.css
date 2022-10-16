@@ -8,7 +8,7 @@ scroll-behavior: smooth;
 html,body{
   height: 100%;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: F57203;
+  background-color: #002e4d;
 }
 /* --------------------------------------------------- */
 .container{
@@ -16,6 +16,7 @@ html,body{
   margin: 0px auto;
   padding: 0px 10px; 
 }
+/* ----------------------------------------------------- */
 .header{
   position: fixed;
   width: 100%;
@@ -66,7 +67,7 @@ z-index: 2;
 
 .header__list li{
   list-style: none;
-  margin-right: 20px;
+  margin-right: 15px;
 }
 
 .header__link{
@@ -74,9 +75,19 @@ z-index: 2;
   text-transform: uppercase;
   font-size: 18px;
   text-decoration: none; 
+  padding: 5px 7px;
+  border-radius: 45px;
+}
+.header__link:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: rgb(16, 14, 14);
+  transform: translateY(-7px);
+   
 }
 
 /* ---------------------------------------------------------------- */
+
 @media(max-width:767px){
   .header__body{
     height: 60px;
@@ -153,67 +164,134 @@ z-index: 2;
    margin: 0px 0px 20px 0px;
   } 
 }  
-
+/* ----------------------------------------------------- */
 #intro{
-  position: relative;
+ 
   height: 100%;
   width: 100%; 
 }
 
 #intro .container{
   display: flex;
+  max-width: 1180px;
+  padding: 2rem;
+  padding-bottom: 6rem;
+  margin-right: auto;
+  margin-left: auto;
   height: 100vh;
-  align-items: center;
+ /* text-decoration: none; */
   width: 100%;
 }
 .intro__inner{
- 
-  height: 100%;
+  position: relative;
+  padding-top: 4.5rem;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between; 
   align-items: center;
-  width: 100%;
+}
+
+
+.intro__banner{
+  max-width: 500px;
 }
 
 .intro__banner-title{
-color: rgb(66, 58, 10);
+color: rgb(99, 95, 73);
 font-size: 56px;
 transition: all .5s ease;
+margin: 0.67em 0;
+flex: 0 auto;
 }
 
 .intro__banner-title span{
   color: #595151;
+  flex: 0 auto;
 }
-
-a.intro__btn{
+.intro__banner-text{
+  padding-top: 1.5rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+    font-size: 1.375rem;
+    line-height: 32px;
+   
+}
+    
+.intro__btn .btn{
   display: inline-block;
   background-color: #4092C0;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 20px 30px;
+  font-size: 30px;
+  }
+
+  .intro__btn .btn:hover {
+  background-color: #2EE59D;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
   color: #fff;
   font-size: 30px;
-  margin-top: 30px;
-  padding: 15px 30px;
-  border-radius: 20px;
+  padding: 20px 30px;
+  border-radius: 45px;
+  transform: translateY(-7px);
 }
 
-.intro__avatar{
+.avatar{
   max-width: 400px;
   border-radius: 50%;
 }
-@media(max-width:767px){
-  .intro__inner{
-  flex-wrap: wrap;
-}
-.intro__banner-title{
-  order: 2;
-}
-.intro__avatar{
-  order: 0;
-}
-}
-
- 
 
 
+@media (max-width: 991px){
+  .intro__banner{
+    flex-basis: 500px;
+    max-width: 459px;
+   }
+  .avatar{
+    max-width: 300px;
+  }
+}
+@media (max-width: 850px){
+  .avatar{
+    max-width: 200px;
+  }
+}
+@media (max-width: 767px){
+  
+  .intro__banner{
+    display: flex;
+    flex-basis: 300px;
+    max-width: 300px;
+    height: 100vh;
+
+  }
+  .intro__banner-title{
+    
+   order: ; 
+   margin-left: 20px;
+  }
+  intro__banner-text
+  .intro__btn{
+    justify-content: center;
+  }
+  
+  
+  .avatar{
+    width: auto;
+    height: auto;
+    max-width: 128px;
+    border-width: 8px;
+    
+  }
+
+}
 
 
 
